@@ -350,7 +350,7 @@ class ADI:
                 approve_data = token_contract.functions.approve(spender, amount_to_wei)
                 estimated_gas = approve_data.estimate_gas({"from": address})
 
-                max_priority_fee = web3.to_wei(1, "gwei")
+                max_priority_fee = web3.to_wei(0.001, "gwei")
                 max_fee = max_priority_fee
 
                 approve_tx = approve_data.build_transaction({
@@ -404,7 +404,7 @@ class ADI:
             request_data = token_contract.functions.requestL2TransactionDirect(request_params)
 
             estimated_gas = request_data.estimate_gas({"from":address})
-            max_priority_fee = web3.to_wei(1, "gwei")
+            max_priority_fee = web3.to_wei(0.001, "gwei")
             max_fee = max_priority_fee
 
             request_tx = request_data.build_transaction({
