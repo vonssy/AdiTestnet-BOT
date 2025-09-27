@@ -535,7 +535,7 @@ class ADI:
                 print(f"{Fore.WHITE + Style.BRIGHT}4. Run All Features{Style.RESET_ALL}")
                 option = int(input(f"{Fore.BLUE + Style.BRIGHT}Choose [1/2/3/4] -> {Style.RESET_ALL}").strip())
 
-                if option in [1, 2, 3]:
+                if option in [1, 2, 3, 4]:
                     option_type = (
                         "Transfer ADI" if option == 1 else 
                         "Bridge ADI to Sepolia" if option == 2 else 
@@ -829,7 +829,7 @@ class ADI:
                     await self.process_option_1(account, address, use_proxy)
                     await self.print_timer()
 
-            if option == 2:
+            elif option == 2:
                 self.log(
                     f"{Fore.CYAN+Style.BRIGHT}Option    :{Style.RESET_ALL}"
                     f"{Fore.BLUE+Style.BRIGHT} Bridge ADI to Sepolia {Style.RESET_ALL}"
