@@ -22,7 +22,7 @@
 
 Adi Testnet BOT is an automated tool designed to streamline transfer and bridge across multiple accounts. It provides seamless integration with ADI & Sepolia network and offers robust proxy support for enhanced security and reliability.
 
-**🔗 Get Started:** [Register on Adi Testnet](https://bridge.testnet.adifoundation.ai/) 
+**🔗 Get Started:** [Register on Adi Testnet](https://bridge.testnet.adifoundation.ai/)  
 **💧 Test Tokens:** [ADI Faucet](https://faucet.testnet.adifoundation.ai/) - [Sepolia Faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 
 > **Important:** Connect the new evm wallet for optimal performance.
