@@ -358,14 +358,14 @@ class ADI:
                     "gas": int(estimated_gas * 1.2),
                     "maxFeePerGas": int(max_fee),
                     "maxPriorityFeePerGas": int(max_priority_fee),
-                    "nonce": self.used_nonce[address],
+                    "nonce": web3.eth.get_transaction_count(address, "pending"),
                     "chainId": web3.eth.chain_id,
                 })
 
                 tx_hash = await self.send_raw_transaction_with_retries(account, web3, approve_tx)
                 receipt = await self.wait_for_receipt_with_retries(web3, tx_hash)
+                
                 block_number = receipt.blockNumber
-                self.used_nonce[address] += 1
 
                 self.log(
                     f"{Fore.CYAN+Style.BRIGHT}   Approve  :{Style.RESET_ALL}"
