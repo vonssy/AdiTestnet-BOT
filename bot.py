@@ -721,7 +721,7 @@ class ADI:
             f"{Fore.WHITE+Style.BRIGHT} {self.transfer_amount} ADI {Style.RESET_ALL}"
         )
 
-        balance = await self.get_token_balance(address, self.L1_NETWORK, use_proxy)
+        balance = await self.get_token_balance(address, self.L2_NETWORK, use_proxy)
         self.log(
             f"{Fore.CYAN+Style.BRIGHT}   Balance  :{Style.RESET_ALL}"
             f"{Fore.WHITE+Style.BRIGHT} {balance} ADI {Style.RESET_ALL}"
